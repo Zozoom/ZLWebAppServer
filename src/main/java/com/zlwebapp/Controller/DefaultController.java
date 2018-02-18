@@ -1,11 +1,11 @@
 package com.zlwebapp.Controller;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import java.util.Collection;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class DefaultController {
@@ -45,9 +45,37 @@ public class DefaultController {
         return "/userList";
     }
 
+    @GetMapping("/createUser")
+    public String createUser() {
+        return "/Error/404";
+    }
+
+    @GetMapping("/mobileApps")
+    public String mobileApps() {
+        return "/Error/404";
+    }
+
+    @GetMapping("/settings")
+    public String settings() {
+        return "/Error/404";
+    }
+
+    /** Error Pages **/
+    @GetMapping("/404")
+    public String error404() {
+        return "/Error/404";
+    }
+
     @GetMapping("/403")
     public String error403() {
         return "/Error/403";
+    }
+
+    /** Another Get back stuff **/
+    @RequestMapping("/app")
+    public String handler(Model model){
+        model.addAttribute("msg", "a message from controller");
+        return "my-page";
     }
 
 }

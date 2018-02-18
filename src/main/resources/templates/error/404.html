@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>403 - ZL's M.A.H.</title>
+    <title>404 - ZL's M.A.H.</title>
     <div th:replace="fragments/header :: header-css"/>
 </head>
 
@@ -13,9 +13,9 @@
 <div class="container">
 
     <div class="mainMenu center">
-        <h1>403 - Access is denied</h1>
+        <h1>404 - Sorry this page is unavailable!</h1>
         <br/>
-        <h3 th:inline="text">Hello '[[${#httpServletRequest.remoteUser}]]', you do not have permission to access this page.</h3>
+        <h3 th:inline="text">Dear [[${#httpServletRequest.remoteUser}]], you have to wait more to see this page.</h3>
     </div>
 
 </div>

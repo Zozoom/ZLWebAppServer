@@ -2,21 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>MyApp - Userlist</title>
+    <title>User - ZL's M.A.H.</title>
     <div th:replace="fragments/header :: header-css"/>
-    <!-- Metas -->
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}"/>
-    <!-- jQuery library -->
-    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js}"/>
-    <!-- Latest compiled JavaScript -->
-    <script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js}"/>
-    <!-- FAVICON -->
-    <link rel='shortcut icon' type='image/x-icon' th:href="@{images/fav.ico}" />
-    <!-- My Styles -->
-    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
 </head>
 
 <body>
@@ -25,13 +12,25 @@
 
 <div class="container">
 
-    <div class="starter-template">
-        <h1>User page (Spring Security protected)</h1>
+    <div class="mainMenu center">
+        <h1 th:inline="text">Welcome dear [[${#httpServletRequest.remoteUser}]]!</h1>
+        <h3>You are on the User page right now.</h3>
 
-        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
-        </form>
+        <br/>
+        <p>Little Music: </p>
+        <iframe name="iframe_a" width="300" height="200" src="https://www.youtube.com/embed/NDJTw5MwhG0"/>
+        <br/>
+        <a href="https://www.youtube.com/watch?v=NDJTw5MwhG0" target="new">YouTube.com</a>
+
+        <div class="row">
+            <br/>
+        </div>
+
+        <div class="row">
+            <form th:action="@{/logout}" method="post">
+                <button type="submit" class="button" style="vertical-align:middle"><span>Sign Out </span></button>
+            </form>
+        </div>
 
     </div>
 

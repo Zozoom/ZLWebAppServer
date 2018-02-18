@@ -1,7 +1,11 @@
+/*------------------------------------------------------------------------------------*/
+/** TAGS **/
+/*------------------------------------------------------------------------------------*/
 body {
 	background-image: url("https://www.walldevil.com/wallpapers/w01/415329-gradient-background-turquoise.jpg");
 	background-repeat: repeat-x;
 	color: white;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 h1{
@@ -11,6 +15,11 @@ h1{
 
 h2{
 	color:#FF0000;
+}
+
+h3{
+    color: #b2b2b2;
+    font-size: medium;
 }
 
 footer{
@@ -26,38 +35,142 @@ footer{
 }
 
 input {
+    margin: inherit;
+    width: 50%;
 	color: black;
+    position: relative;
+    background-color: rgba(34, 34, 34, 0.50);
 }
 
-/*hide role-specific div html*/
 li.navBarList{
     visibility : hidden;
 }
 
+p{
+    margin-bottom: -1px;
+    width: 50%;
+    font-size: 18px;
+}
+/*------------------------------------------------------------------------------------*/
+/** Links hovered and so on... **/
+/*------------------------------------------------------------------------------------*/
+/* unvisited link */
+a:link {
+    color: #4CAF50;
+}
+
+/* visited link */
+a:visited {
+    color: #397339;
+}
+
+/* mouse over link */
+a:hover {
+    color: #4ed552;
+}
+
+/* selected link */
+a:active {
+    color: #428a45;
+}
+/*------------------------------------------------------------------------------------*/
+/** Classes **/
+/*------------------------------------------------------------------------------------*/
 .form-control{
 	width: 50% !important;
 }
-
+.mainMenu {
+    position: relative;
+    text-align: center;
+    background-color: rgba(34, 34, 34, 0.35);
+}
+.center {
+    margin: inherit;
+    width: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.39);
+    padding: 10px;
+}
+/*------------------------------------------------------------------------------------*/
+/** ID's **/
+/*------------------------------------------------------------------------------------*/
 #customers {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	border-collapse: collapse;
 	width: 100%;
 	color: black;
 }
-
 #customers td, #customers th {
 	border: 1px solid #ddd;
 	padding: 8px;
 }
-
-#customers tr {background-color: #e4e8d7;}
-
-#customers tr:hover {background-color: #93978b;}
-
+#customers tr {
+    background-color: #e4e8d7;
+}
+#customers tr:hover {
+    background-color: #93978b;
+}
 #customers th {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	text-align: left;
 	background-color: #4CAF50;
 	color: white;
+}
+/*------------------------------------------------------------------------------------*/
+/** BUTTONS **/
+/*------------------------------------------------------------------------------------*/
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color:  #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 22px;
+    padding: 15px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/*------------------------------------------------------------------------------------*/
+/** Input Fields **/
+/*------------------------------------------------------------------------------------*/
+input[type=text], input[type=password], select {
+    width: 45%;
+    color: #000000;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.81);
+    padding: 3px 3px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #4caf50;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
