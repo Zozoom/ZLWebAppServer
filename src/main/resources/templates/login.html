@@ -10,50 +10,59 @@
 
 <div th:replace="fragments/header :: header"/>
 
-<div class="container">
+<div class="containerToHeader">
 
     <div class="mainMenu center">
         <form th:action="@{/login}" method="post">
             <fieldset>
 
-                <h1>Please Sign In</h1>
-
-                <br/>
+                <h1>ZL's Mobile Apps</h1>
 
                 <div th:if="${param.error}">
                     <div class="alert alert-danger">
-                        Invalid username and password.
+                        <p>Invalid username and password. Please check it!</p>
                     </div>
                 </div>
 
                 <div th:if="${param.logout}">
                     <div class="alert alert-info">
-                        You have been logged out.
+                        <p>You have been logged out successfully.</p>
                     </div>
                 </div>
 
-                <div class="">
-                    <p>Username:</p>
+                <img class="iconImage" src="../favicon.ico" title="This is the icon of the Web Application."/>
+
+
+                <h2>Please Sign In to the site.</h2>
+
+                <div>
+                    <p class="plogin">Username:
                     <input type="text" name="username" id="username" placeholder="User name here" required="true" autofocus="true"/>
+                    </p>
                 </div>
 
-                <div class="">
-                    <p>Password:</p>
+                <div>
+                    <p class="plogin">Password:
                     <input type="password" name="password" id="password" placeholder="Password here" required="true"/>
+                    </p>
                 </div>
 
+                <!--/* BREAK */-->
                 <br/>
+                <!--/* BREAK */-->
 
-                <div class="row">
-                    <button type="submit" class="button" style="vertical-align:middle"><span>Sign in </span></button>
+                <div class="row" title="Sign in to the site...">
+                    <button type="submit" class="button" style="vertical-align:middle"><i class="fa fa-sign-in"></i><span>Sign in </span></button>
                 </div>
 
-                <div class="row">
+                <div class="row" title="Go back to the first page.">
                     <a th:href="@{/}">
-                        <button type="button" class="button" style="vertical-align:middle"><span>Home </span></button>
+                        <button type="button" class="button" style="vertical-align:middle"><i class="fa fa-home"></i><span>Home </span></button>
                     </a>
                 </div>
-
+                <!--/* BREAK */-->
+                <br/>
+                <!--/* BREAK */-->
             </fieldset>
         </form>
     </div>

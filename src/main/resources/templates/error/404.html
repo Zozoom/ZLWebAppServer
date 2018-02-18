@@ -10,14 +10,29 @@
 
 <div th:replace="fragments/header :: header"/>
 
-<div class="container">
+<div class="containerToHeader">
 
     <div class="mainMenu center">
-        <h1>404 - Sorry this page is unavailable!</h1>
-        <br/>
-        <h3 th:inline="text">Dear [[${#httpServletRequest.remoteUser}]], you have to wait more to see this page.</h3>
-    </div>
 
+        <h1>404 - Sorry this page is unavailable!</h1>
+        <!--/* BREAK */-->
+        <br/>
+        <!--/* BREAK */-->
+        <h3 th:inline="text">Dear [[${#httpServletRequest.remoteUser}]], you have to wait more to see this page.</h3>
+        <!--/* BREAK */-->
+        <br/>
+        <!--/* BREAK */-->
+        <div class="row">
+            <div class="row">
+                <a th:href="@{/}">
+                    <button type="button" class="button" style="vertical-align:middle"><i class="fa fa-home"></i><span>Home </span></button>
+                </a>
+            </div>
+        </div>
+        <!--/* BREAK */-->
+        <br/>
+        <!--/* BREAK */-->
+    </div>
 </div>
 <!-- /.container -->
 

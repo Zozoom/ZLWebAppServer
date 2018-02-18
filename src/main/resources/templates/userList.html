@@ -2,21 +2,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>MyApp - Userlist</title>
+    <title>Users - ZL's M.A.H.</title>
     <div th:replace="fragments/header :: header-css"/>
-    <!-- Metas -->
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}"/>
-    <!-- jQuery library -->
-    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js}"/>
-    <!-- Latest compiled JavaScript -->
-    <script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js}"/>
-    <!-- FAVICON -->
-    <link rel='shortcut icon' type='image/x-icon' th:href="@{images/fav.ico}" />
-    <!-- My Styles -->
-    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
     <!-- Java Scripts -->
     <script th:src="@{/js/jquery.min.js}"></script>
     <script th:src="@{/js/indexJs.js}"></script>
@@ -26,17 +13,31 @@
 
 <div th:replace="fragments/header :: header"/>
 
-<div class="container">
+<div class="containerToHeader">
 
+    <div class="mainMenu center">
         <h1>Users List Page</h1>
-
+        <!--/* BREAK */-->
         <br/>
+        <!--/* BREAK */-->
         <table id="customers">
 
         </table>
-
+        <!--/* BREAK */-->
         <br/>
-
+        <!--/* BREAK */-->
+        <h3>Here is where you can see the users and applications in one table.</h3>
+        <div class="row">
+            <div class="row">
+                <a th:href="@{/}">
+                    <button type="button" class="button" style="vertical-align:middle"><i class="fa fa-home"></i><span>Home </span></button>
+                </a>
+            </div>
+        </div>
+        <!--/* BREAK */-->
+        <br/>
+        <!--/* BREAK */-->
+    </div>
 </div>
 <!-- /.container -->
 

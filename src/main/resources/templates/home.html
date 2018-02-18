@@ -10,15 +10,36 @@
 
 <div th:replace="fragments/header :: header"/>
 
-<div class="container">
+<div class="containerToHeader">
     <div class="mainMenu center">
         <h1>ZL's Mobile App Handler</h1>
         <h3>Welcome to our Mobile App handler!</h3>
+        <!--/* BREAK */-->
         <br/>
-        <h2><a th:href="@{/admin}">Admin page</a></h2>
-        <h2><a th:href="@{/user}">User page</a></h2>
-        <h2><a th:href="@{/about}">About page</a></h2>
+        <!--/* BREAK */-->
+        <img class="iconImage" src="../favicon.ico" title="This is the icon of the Web Application."/>
+        <!--/* BREAK */-->
         <br/>
+        <!--/* BREAK */-->
+
+        <h2>
+            <a th:href="@{/admin}" title="You can login as a Admin.">
+                <button type="button" class="button" style="vertical-align:middle"><i class="fa fa-home"></i><span>  Admin page </span></button>
+            </a>
+        </h2>
+        <h2>
+            <a th:href="@{/user}" title="You can login as a User.">
+                <button type="button" class="button" style="vertical-align:middle"><i class="fa fa-user"></i><span>  User page</span></button>
+            </a>
+        </h2>
+        <h2>
+            <a th:href="@{/about}" title="You can read about us.">
+                <button type="button" class="button" style="vertical-align:middle"><i class="fa fa-book"></i><span>  About page</span></button>
+            </a>
+        </h2>
+        <!--/* BREAK */-->
+        <br/>
+        <!--/* BREAK */-->
     </div>
 </div>
 <!-- /.container -->

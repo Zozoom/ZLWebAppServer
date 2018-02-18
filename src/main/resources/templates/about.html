@@ -1,34 +1,31 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
-    <title>MyApp - Userlist</title>
+    <title>About - ZL's M.A.H. </title>
     <div th:replace="fragments/header :: header-css"/>
-    <!-- Metas -->
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}"/>
-    <!-- jQuery library -->
-    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js}"/>
-    <!-- Latest compiled JavaScript -->
-    <script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js}"/>
-    <!-- FAVICON -->
-    <link rel='shortcut icon' type='image/x-icon' th:href="@{images/fav.ico}" />
-    <!-- My Styles -->
-    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
 </head>
 
 <body>
 
 <div th:replace="fragments/header :: header"/>
 
-<div class="container">
+<div class="containerToHeader">
 
-    <div class="starter-template">
-        <h1>Normal page (No need login)</h1>
+    <div class="mainMenu center">
+        <h1 th:inline="text">Welcome dear Guest!</h1>
+        <h3>You are on the Admin page right now.</h3>
+
+        <div class="row">
+            <div class="row">
+                <a th:href="@{/}">
+                    <button type="button" class="button" style="vertical-align:middle"><i class="fa fa-home"></i><span>Home </span></button>
+                </a>
+            </div>
+        </div>
+        <!--/* BREAK */-->
+        <br/>
+        <!--/* BREAK */-->
     </div>
-
 </div>
 <!-- /.container -->
 

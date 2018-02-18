@@ -45,13 +45,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 
         auth.inMemoryAuthentication()
-                .withUser("Zozoom").password("admin").roles("ADMIN")
+                .withUser("ZAdmin").password("admin").roles("ADMIN")
                 .and()
-                .withUser("LaciMaster").password("admin").roles("ADMIN")
-                .and()
-                .withUser("Apa").password("admin").roles("USER")
-                .and()
-                .withUser("Kriszti").password("admin").roles("USER");
+                .withUser("Apa").password("admin").roles("USER");
+
     }
 
 //    //Spring Boot configured this already.

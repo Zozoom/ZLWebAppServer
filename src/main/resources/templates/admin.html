@@ -10,13 +10,14 @@
 
 <div th:replace="fragments/header :: header"/>
 
-<div class="container">
+<div class="containerToHeader">
 
     <div class="mainMenu center">
         <h1 th:inline="text">Welcome dear [[${#httpServletRequest.remoteUser}]]!</h1>
         <h3>You are on the Admin page right now.</h3>
-
+        <!--/* BREAK */-->
         <br/>
+        <!--/* BREAK */-->
         <p>Little Music: </p>
         <iframe name="iframe_a" width="300" height="200" src="https://www.youtube.com/embed/NDJTw5MwhG0"/>
         <br/>
@@ -28,10 +29,12 @@
 
         <div class="row">
             <form th:action="@{/logout}" method="post">
-                <button type="submit" class="button" style="vertical-align:middle"><span>Sign Out </span></button>
+                <button type="submit" class="button" style="vertical-align:middle"><i class="fa fa-sign-out"></i><span>Sign out </span></button>
             </form>
         </div>
-
+        <!--/* BREAK */-->
+        <br/>
+        <!--/* BREAK */-->
     </div>
 
 </div>

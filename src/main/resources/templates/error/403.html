@@ -10,14 +10,27 @@
 
 <div th:replace="fragments/header :: header"/>
 
-<div class="container">
-
+<div class="containerToHeader">
     <div class="mainMenu center">
         <h1>403 - Access is denied</h1>
+        <!--/* BREAK */-->
         <br/>
+        <!--/* BREAK */-->
         <h3 th:inline="text">Hello '[[${#httpServletRequest.remoteUser}]]', you do not have permission to access this page.</h3>
+        <!--/* BREAK */-->
+        <br/>
+        <!--/* BREAK */-->
+        <div class="row">
+            <div class="row">
+                <a th:href="@{/}">
+                    <button type="button" class="button" style="vertical-align:middle"><i class="fa fa-home"></i><span>Home </span></button>
+                </a>
+            </div>
+        </div>
+        <!--/* BREAK */-->
+        <br/>
+        <!--/* BREAK */-->
     </div>
-
 </div>
 <!-- /.container -->
 
