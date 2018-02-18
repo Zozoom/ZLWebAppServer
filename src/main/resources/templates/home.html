@@ -6,6 +6,7 @@
     <div th:replace="fragments/header :: header-css"/>
 </head>
 
+<!--/*Disable the Developer tool. <body oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;"> */-->
 <body>
 
 <div th:replace="fragments/header :: header"/>
@@ -27,7 +28,7 @@
                 <button type="button" class="button" style="vertical-align:middle"><i class="fa fa-home"></i><span>  Admin page </span></button>
             </a>
         </h2>
-        <h2>
+        <h2 class="hidden">
             <a th:href="@{/user}" title="You can login as a User.">
                 <button type="button" class="button" style="vertical-align:middle"><i class="fa fa-user"></i><span>  User page</span></button>
             </a>

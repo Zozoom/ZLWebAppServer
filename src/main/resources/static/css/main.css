@@ -18,6 +18,11 @@ h2{
     font-size: 100%;
 }
 
+summary{
+    color: white;
+    font-size: 100%;
+}
+
 h3{
     color: #b2b2b2;
     font-size: medium;
@@ -35,23 +40,15 @@ footer{
     height: 75px;
 }
 
-/*input {*/
-    /*margin: inherit;*/
-    /*width: 50%;*/
-	/*color: black;*/
-    /*position: relative;*/
-    /*background-color: rgba(34, 34, 34, 0.50);*/
-/*}*/
-
 li.navBarList{
     visibility : hidden;
 }
 
-p.plogin{
-    margin-bottom: -1px;
-    font-size: 18px;
-    text-align: center;
-    margin-left: -50px;
+label.plogin{
+    /*margin-bottom: -1px;*/
+    font-size: 15px;
+    text-align: left;
+    /*margin-left: -50px;*/
     white-space: normal;
 }
 
@@ -126,6 +123,10 @@ a:active {
     border: 1px solid transparent;
     border-radius: 4px;
     width: 70%;
+}
+.hidden {
+    display: none;
+    visibility: hidden;
 }
 /*------------------------------------------------------------------------------------*/
 /** ID's **/
@@ -202,7 +203,7 @@ a:active {
 /** Input Fields **/
 /*------------------------------------------------------------------------------------*/
 input[type=text], input[type=password], select {
-    width: 30%;
+    width: 50%;
     color: #000000;
     position: relative;
     background-color: rgba(255, 255, 255, 0.81);

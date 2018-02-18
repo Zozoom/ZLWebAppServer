@@ -47,13 +47,11 @@ public class DefaultController {
 
     @GetMapping("/createUser")
     public String createUser() {
-        return "/Error/404";
+        return "createUser";
     }
 
     @GetMapping("/mobileApps")
-    public String mobileApps() {
-        return "/Error/404";
-    }
+    public String mobileApps() { return "/mobileApps"; }
 
     @GetMapping("/settings")
     public String settings() {

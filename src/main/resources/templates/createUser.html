@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Create User - ZL's M.A.H.</title>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="containerToHeader">
+
+    <div class="mainMenu center">
+        <h1>Create User Page</h1>
+        <h2>(Please fill in this form to create an account.)</h2>
+        <!--/* BREAK */-->
+        <br/>
+        <!--/* BREAK */-->
+
+        <form action="/action_page.php">
+            <div class="row">
+                <label for="fname">First Name: </label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
+            </div>
+
+            <div class="row">
+                <label for="lname">Last Name: </label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
+            </div>
+
+            <div class="row">
+                <label for="uname">User Name: </label>
+                <input type="text" id="uname" name="uname" placeholder="Your uname name.."/>
+            </div>
+
+            <div class="row">
+                <label for="email">Email: </label>
+                <input type="text" id="email" name="email" placeholder="Your email.."/>
+            </div>
+
+            <div class="row">
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" placeholder="Your password.."/>
+            </div>
+
+            <div class="row">
+                <label for="confpassword">Confirm Password: </label>
+                <input type="password" id="confpassword" name="confpassword" placeholder="Confirm password.."/>
+            </div>
+
+            <div class="row">
+                <label for="country">Country: </label>
+                <select id="country" name="country">
+                    <option value="hungary">Hungary</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+            </div>
+
+            <div class="row" title="Sign in to the site...">
+                <button type="submit" class="button" style="vertical-align:middle"><i class="fa fa-check"></i><span>Create User </span></button>
+                <button type="submit" class="button" style="vertical-align:middle;background-color:#c93333;"><i class="fa fa-close"></i><span>Cancel </span></button>
+            </div>
+        </form>
+
+        <!--/* BREAK */-->
+        <br/>
+        <!--/* BREAK */-->
+        <div class="row">
+            <div class="row">
+                <a th:href="@{/}">
+                    <button type="button" class="button" style="vertical-align:middle"><i class="fa fa-home"></i><span>Home </span></button>
+                </a>
+            </div>
+        </div>
+
+        <h3>Here is where you can see the users and applications in one table.</h3>
+
+    </div>
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>
