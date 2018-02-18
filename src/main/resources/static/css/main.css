@@ -1,0 +1,63 @@
+body {
+	background-image: url("https://www.walldevil.com/wallpapers/w01/415329-gradient-background-turquoise.jpg");
+	background-repeat: repeat-x;
+	color: white;
+}
+
+h1{
+	color: white;
+	text-align: center;
+}
+
+h2{
+	color:#FF0000;
+}
+
+footer{
+    background-color: rgba(34, 34, 34, 0.75);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 75px;
+}
+
+input {
+	color: black;
+}
+
+/*hide role-specific div html*/
+li.navBarList{
+    visibility : hidden;
+}
+
+.form-control{
+	width: 50% !important;
+}
+
+#customers {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	color: black;
+}
+
+#customers td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#customers tr {background-color: #e4e8d7;}
+
+#customers tr:hover {background-color: #93978b;}
+
+#customers th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+}
